@@ -2,7 +2,7 @@
 #
 # A simple Bash script to grab all the images from a website and save them into a directory.
 #
-# Written by Will Chatham. @willc
+# Written by Will Chatham. @willc.  https://www.willchatham.com
 #
 # Use at your own risk.
 #
