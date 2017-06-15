@@ -1,11 +1,10 @@
 #!/usr/bin/python
 
 ###################################################
-#
-#   RemoteRecon - written by Justin Ohneiser
-# ------------------------------------------------
-# Inspired by reconscan.py by Mike Czumak
-#
+# Reconnaisance (did I spell that right?) Scanner
+# Inspired by Mike Czumak's reconscan.py
+# Re-inspired by Justin Ohneiser's RemoteRecon
+# Discovered via searching GitHub for OSCP scripts
 # This program will conduct full reconnaissance
 # on a target using three steps:
 #   1. Light NMAP scan -> to identify services
