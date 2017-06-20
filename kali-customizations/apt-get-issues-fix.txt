@@ -1,0 +1,19 @@
+In kali-rolling, I have had many issues with 404's when trying to update from the repos.
+
+To fix it, edit this:
+
+/etc/apt/sources.list 
+
+Make these changes to what is there:
+
+deb http://repo.kali.org/kali kali-rolling main non-free contrib
+
+deb-src http://repo.kali.org/kali kali-rolling main contrib non-free
+
+
+Then, close all folders and open terminal to type:
+
+apt-get clean
+apt-get update
+apt-get dist-upgrade
+

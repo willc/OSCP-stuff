@@ -1,0 +1,80 @@
+SETUP PYTHON ENVIRONMENT
+(after installing Python proper)
+
+--Setuptools and pip--
+
+One of the most useful pieces of third-party Python software is Setuptools. With Setuptools, you can download and install any compliant Python libraries with a single command.
+
+> pip install setuptools
+
+--Virtualenv--
+
+Virtual environments help to separate dependencies required for different projects, by working inside a virtual environment it also helps to keep our global site-packages directory clean.
+
+---Using virtualenv and virtualwrapper---
+
+Virtualenv is a Python module which helps to create isolated Python environments for our scripting experiments, which creates a folder with all necessary executable files and modules for a basic Python project.
+
+You can install virtualenv with the following command:
+
+	    $ sudo pip install virtualenv
+		To create a new virtual environment, create a folder and enter the folder from the command line:
+
+		$ cd your_new_folder 
+		$ virtualenv name-of-virtual-environment 
+
+This will initiate a folder with the provided name in your current working directory with all Python executable files and pip library, which will then help to install other packages in your virtual environment.
+
+You can select a Python interpreter of your choice by providing more parameters, such as the following command:
+
+		$ ac/bin/python2.7 name-of-virtual-environment 
+
+This will create a virtual environment with Python 2.7. We have to activate it before starting to use this virtual environment:
+
+		$ source name-of-virtual-environment/bin/activate
+
+---Using virtualenv and virtualwrapper---
+
+Now, on the left side of the command prompt, the name of the active virtual environment will appear. Any package that you install inside this prompt using pip will belong to the active virtual environment, which will be isolated from all other virtual environments and global installation.
+
+You can deactivate and exit from the current virtual environment using this command:
+
+		$ deactivate
+
+Virtualenvwrapper provides a better way to use virtualenv. It also organizes all virtual environments in one place.
+
+To install, we can use pip, but let's make sure we have installed virtualenv before installing virtualwrapper.
+
+Linux and OS X users can install it with the following method:
+
+		$ pip install virtualenvwrapper
+
+Also, add these three lines to your shell startup file, such as .bashrc or .profile:
+
+		export WORKON_HOME=$HOME/.virtualenvs 
+		export PROJECT_HOME=$HOME/Devel 
+		source /usr/local/bin/virtualenvwrapper.sh 
+
+This will set Devel folder in your home directory as the location of your virtual environment projects.
+
+For Windows users, we can use another package: virtualenvwrapper-win. This can also be installed with pip:
+
+		$ pip install virtualenvwrapper-win
+
+To create a virtual environment with virtualwrapper:
+
+		$ mkvirtualenv your-project-name
+
+This creates a folder with the provided name inside ~/Envs.
+
+To activate this environment, we can use the workon command:
+
+		$ workon your-project-name
+
+This two commands can be combined with the single one as follows:
+
+		$ mkproject your-project-name
+
+We can deactivate the virtual environment with the same deactivate command in virtualenv. To delete a virtual environment, we can use the following command:
+
+		$ rmvirtualenv your-project-name
